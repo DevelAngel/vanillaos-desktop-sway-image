@@ -23,16 +23,23 @@ stages:
 
   # Put your custom actions behind this comment
 
-  - name: example-packages # Sample module using the built-in Apt module to install packages
+  - name: sway-packages
     type: apt
     source:
       packages:
-      - vim
+      - sway
+      - swaybg
+      - swayimg
+      - swayidle
+      - swaylock
+      - fonts-font-awesome
 
-  - name: example-commands # Sample module demonstrating the Shell module with custom commands
+  - name: sway-config-overwrite
     type: shell
     commands:
-    - echo Example output
+    - cp -av /etc/sway/config /etc/sway/config.orig
+    - cp -av /etc/sway/config.vanillaos /etc/sway/config
+    - echo Sway configuration updated for Vanilla-OS
 
   # Put your custom actions before this comment
 
