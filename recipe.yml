@@ -33,6 +33,7 @@ stages:
       - swayidle
       - swaylock
       - fonts-font-awesome
+      - fuzzel
 
   - name: sway-config-overwrite
     type: shell
