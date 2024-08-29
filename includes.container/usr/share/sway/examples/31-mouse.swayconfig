@@ -1,0 +1,4 @@
+# MOUSE CONFIG
+input type:mouse left_handed disabled
+input type:mouse natural_scroll disabled
+input type:mouse accel_profile adaptive

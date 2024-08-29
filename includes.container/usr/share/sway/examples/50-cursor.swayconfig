@@ -1,0 +1,3 @@
+# SEAT CONFIG
+seat * hide_cursor 8000
+#seat * xcursor_theme comix 48

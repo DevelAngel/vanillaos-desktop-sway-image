@@ -1,0 +1,5 @@
+# keyboard
+input type:keyboard xkb_layout "us,de"
+input type:keyboard xkb_variant "intl,"
+input type:keyboard xkb_options "grp:ctrls_toggle"
+input type:keyboard xkb_capslock disabled

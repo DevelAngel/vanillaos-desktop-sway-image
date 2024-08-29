@@ -1,0 +1,15 @@
+# TOUCHPAD CONFIG
+# dwt = disable touchpad while typing
+input type:touchpad dwt enabled
+input type:touchpad tap enabled
+#input type:touchpad click_method button_areas
+input type:touchpad click_method clickfinger
+input type:touchpad tap_button_map lrm
+#input type:touchpad scroll_method edge
+input type:touchpad scroll_method two_finger
+input type:touchpad middle_emulation enabled
+input type:touchpad drag enabled
+input type:touchpad drag_lock enabled
+input type:touchpad events disabled_on_external_mouse enabled
+input type:touchpad natural_scroll enabled
+
