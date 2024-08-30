@@ -34,6 +34,7 @@ stages:
       - swaylock
       - fonts-font-awesome
       - fuzzel
+      - pulseaudio-utils # pactl
 
   - name: sway-config-overwrite
     type: shell
