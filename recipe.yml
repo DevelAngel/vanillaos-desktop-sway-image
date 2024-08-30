@@ -42,6 +42,13 @@ stages:
     - cp -av /etc/sway/config.vanillaos /etc/sway/config
     - echo Sway configuration updated for Vanilla-OS
 
+  - name: sway-session-overwrite
+    type: shell
+    commands:
+    - cp -av /wayland-sessions/sway.desktop /usr/share/wayland-sessions/sway.desktop
+    - rm -rv /wayland-sessions
+    - echo Sway session updated for Vanilla-OS
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
