@@ -1,0 +1,12 @@
+[Unit]
+Description=Screen locker for Wayland
+Documentation=man:swaylock(1)
+PartOf=graphical-session.target
+After=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swaylock -d
+# SIGUSR1: Unlock the screen and exit.
+KillSignal=SIGUSR1
+Restart=on-failure

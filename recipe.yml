@@ -50,6 +50,26 @@ stages:
     - rm -rv /wayland-sessions
     - echo Sway session updated for Vanilla-OS
 
+  # swaylock starts /sbin/unix_chkpwd as user via pam.
+  # unix_chkpwd tries to read /etc/shadow but only root is allowed to.
+  # The quick solution is to set the s-bit for the root of /sbin/unix_chkpwd.
+  # The more secure solution would be that swaylock uses saslauthd.
+  # Note: Changing the group of /etc/shadow does not help.
+  - name: swaylock-fix
+    type: shell
+    commands:
+    - ls -l /sbin/unix_chkpwd /etc/shadow
+    # ```console
+    # -rwxr-sr-x 1 root shadow /sbin/unix_chkpwd
+    # -rw-r----- 1 root root   /etc/shadow
+    # ```
+    - chmod u+s /sbin/unix_chkpwd
+    - ls -l /sbin/unix_chkpwd /etc/shadow
+    # ```console
+    # -rwsr-sr-x 1 root shadow /sbin/unix_chkpwd
+    # -rw-r----- 1 root root   /etc/shadow
+    # ```
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
