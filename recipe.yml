@@ -35,6 +35,7 @@ stages:
       - fonts-font-awesome
       - fuzzel
       - pulseaudio-utils # pactl
+      - wlogout
 
   - name: sway-config-overwrite
     type: shell
