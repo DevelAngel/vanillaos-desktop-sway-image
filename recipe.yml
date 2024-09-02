@@ -36,6 +36,7 @@ stages:
       - fuzzel
       - pulseaudio-utils # pactl
       - wlogout
+      - waybar # installs and enables waybar.service
 
   - name: sway-config-overwrite
     type: shell
