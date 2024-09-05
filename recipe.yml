@@ -23,6 +23,12 @@ stages:
 
   # Put your custom actions behind this comment
 
+  - name: common-packages
+    type: apt
+    source:
+      packages:
+      - vim
+
   - name: sway-packages
     type: apt
     source:
