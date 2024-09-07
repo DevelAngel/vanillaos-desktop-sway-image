@@ -44,7 +44,6 @@ stages:
       - wlogout
       - waybar # installs and enables waybar.service
       - brightnessctl
-      - brightness-udev # allow unprivileged users to set the brightness
 
   - name: sway-config-overwrite
     type: shell

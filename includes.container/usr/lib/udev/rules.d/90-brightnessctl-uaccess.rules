@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="backlight", TAG+="uaccess"
+ACTION=="add", SUBSYSTEM=="leds", TAG+="uaccess"
