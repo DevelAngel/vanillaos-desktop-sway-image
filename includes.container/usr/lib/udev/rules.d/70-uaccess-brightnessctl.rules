@@ -1,0 +1,17 @@
+# brightnessctl fix for the following error message:
+#
+# ```console
+# $ brightnessctl set +10
+# Can't modify brightness: Permission denied
+#
+# You should run this program with root privileges.
+# Alternatively, get write permissions for device files.
+# ```
+
+ACTION=="remove", GOTO="uaccess_brightnessctl_end"
+ENV{MAJOR}=="", GOTO="uaccess_brightnessctl_end"
+
+SUBSYSTEM=="backlight", TAG+="uaccess"
+SUBSYSTEM=="leds", TAG+="uaccess"
+
+LABEL="uaccess_brightnessctl_end"
