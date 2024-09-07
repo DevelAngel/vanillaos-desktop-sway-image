@@ -78,6 +78,15 @@ stages:
     # -rw-r----- 1 root root   /etc/shadow
     # ```
 
+  - name: blight-setup
+    type: shell
+    commands:
+    - /usr/bin/blight setup
+    - ls -l /usr/bin/blight
+    - chgrp --changes video /usr/bin/blight
+    - chmod --changes g+s /usr/bin/blight
+    - ls -l /usr/bin/blight
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
