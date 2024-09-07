@@ -1,0 +1,26 @@
+$ cargo install --locked blight
+    Updating crates.io index
+  Downloaded blight v0.7.1
+  Downloaded 1 crate (16.9 KB) in 1.10s
+  Installing blight v0.7.1
+    Updating crates.io index
+    Updating crates.io index
+  Downloaded colored v2.1.0
+  Downloaded fs4 v0.6.6
+  Downloaded lazy_static v1.4.0
+  Downloaded errno v0.3.8
+  Downloaded bitflags v2.4.2
+  Downloaded rustix v0.38.31
+  Downloaded libc v0.2.153
+  Downloaded linux-raw-sys v0.4.13
+  Downloaded 8 crates (2.7 MB) in 1.13s (largest was `linux-raw-sys` at 1.5 MB)
+   Compiling rustix v0.38.31
+   Compiling bitflags v2.4.2
+   Compiling linux-raw-sys v0.4.13
+   Compiling lazy_static v1.4.0
+   Compiling colored v2.1.0
+   Compiling fs4 v0.6.6
+   Compiling blight v0.7.1
+    Finished `release` profile [optimized] target(s) in 21.02s
+  Installing /usr/local/cargo/bin/blight
+   Installed package `blight v0.7.1` (executable `blight`)
