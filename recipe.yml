@@ -79,6 +79,31 @@ stages:
     # -rw-r----- 1 root root   /etc/shadow
     # ```
 
+  # brightnessctl cannot change brightness settings
+  # because the user is not in the video group.
+  # ```console
+  # [<user>@host-shell]$ groups
+  # <user> adm sudo users lpadmin
+  # ```
+  # The brightness class already has the group video and is located in:
+  # ```console
+  # -rw-rw-r-- 1 root video /sys/class/backlight/<device>/brightness
+  # ```
+  # Note: Alternates like udev uaccess mode seems not to work.
+  - name: brightnessctl-fix
+    type: shell
+    commands:
+    - ls -l /usr/bin/brightnessctl
+    # ```console
+    # -rwxr-xr-x 1 root root /usr/bin/brightnessctl
+    # ```
+    - chgrp video /usr/bin/brightnessctl
+    - chmod g+s /usr/bin/brightnessctl
+    - ls -l /usr/bin/brightnessctl
+    # ```console
+    # -rwxr-sr-x 1 root video /usr/bin/brightnessctl
+    # ```
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
