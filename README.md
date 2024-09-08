@@ -15,6 +15,26 @@ Windows are arranged into a grid by default which maximizes the efficiency of yo
 
 We want to provide a similar experiance as the [Manjaro Sway Edition](https://github.com/manjaro-sway/manjaro-sway) does for Manjaro Linux.
 
+## Features
+
+ * Vanilla OS background image
+ * screen locking: [swaylock](https://github.com/swaywm/swaylock), triggered by [swayidle](https://github.com/swaywm/swayidle)
+ * app launcher: [Fuzzel](https://codeberg.org/dnkl/fuzzel)
+ * bar: [Waybar](https://github.com/Alexays/Waybar)
+ * logout menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
+ * brightness control with XF86MonBrightnessUp/Down keys: [blight](https://github.com/voltaireNoir/blight) 0.7.1
+ * based on Vanilla OS Desktop image (Gnome3 desktop)
+
+## Managing user applications with systemd
+
+ * sway's output handled by journald: `journalctl --user --identifier sway`
+ * `sway-session.target`
+ * `waybar.service`
+ * `swayidle.service`
+ * `swaylock.service`
+
+Guide used: [systemd integration - Managing user applications with systemd](https://github.com/swaywm/sway/wiki/Systemd-integration#managing-user-applications-with-systemd)
+
 ## Build
 
 > [!NOTE]
