@@ -2,7 +2,7 @@ name: Vib Build
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main", "dev", "dev-hyprland" ]
     tags:
       - '*'
   schedule:
