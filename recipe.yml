@@ -46,19 +46,21 @@ stages:
       - fontconfig
 
   # NOTE: Waybar default config needs Font Awesome and Meslo LG.
-  - name: nerd-fonts-for-waybar
+  #       Mako supports emojis.
+  - name: nerd-fonts
     type: shell
     commands:
       - mkdir -p /usr/share/fonts
       - wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
       - fc-cache -fv
 
-  - name: more-fonts-for-waybar
+  - name: more-fonts
     type: apt
     source:
       packages:
       - fonts-font-awesome
       - fonts-material-design-icons-iconfont
+      - fonts-noto-color-emoji
 
   - name: sway-config-overwrite
     type: shell
