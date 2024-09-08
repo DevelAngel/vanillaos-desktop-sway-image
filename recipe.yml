@@ -27,6 +27,7 @@ stages:
     type: apt
     source:
       packages:
+      - tree
       - vim
 
   - name: sway-packages
@@ -43,6 +44,7 @@ stages:
       - wlogout
       - waybar # installs and enables waybar.service
       - sway-notification-center # installs and enables swaync.service
+      - xdg-desktop-portal-wlr
       - fontconfig
 
   # NOTE: Waybar default config needs Font Awesome and Meslo LG.

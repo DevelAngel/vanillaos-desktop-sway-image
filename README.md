@@ -23,6 +23,7 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
  * bar: [Waybar](https://github.com/Alexays/Waybar)
  * logout menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
  * notifications: [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
+ * [XDG Desktop Portal](https://github.com/flatpak/xdg-desktop-portal) backend: [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr)
  * brightness control with XF86MonBrightnessUp/Down keys: [blight](https://github.com/voltaireNoir/blight) 0.7.1
  * based on Vanilla OS Desktop image (Gnome3 desktop)
 
@@ -31,6 +32,8 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
  * sway's output handled by journald: `journalctl --user --identifier sway`
  * `waybar.service`
  * `swaync.service`
+ * `xdg-desktop-portal.service`
+ * `xdg-desktop-portal-wlr.service`
  * `sway-session.target`
  * `swayidle.service`
  * `swaylock.service`
