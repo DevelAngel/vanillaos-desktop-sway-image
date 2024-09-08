@@ -105,6 +105,14 @@ stages:
     - chmod --changes g+s /usr/bin/blight
     - ls -l /usr/bin/blight
 
+  - name: hyprland-packages
+    type: apt
+    source:
+      packages:
+      - hyprland
+      - hyprland-backgrounds
+      - hyprland-protocols
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
