@@ -38,11 +38,26 @@ stages:
       - swayimg
       - swayidle
       - swaylock
-      - fonts-font-awesome
       - fuzzel
       - pulseaudio-utils # pactl
       - wlogout
       - waybar # installs and enables waybar.service
+      - fontconfig
+
+  # NOTE: Waybar default config needs Font Awesome and Meslo LG.
+  - name: nerd-fonts-for-waybar
+    type: shell
+    commands:
+      - mkdir -p /usr/share/fonts
+      - wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
+      - fc-cache -fv
+
+  - name: more-fonts-for-waybar
+    type: apt
+    source:
+      packages:
+      - fonts-font-awesome
+      - fonts-material-design-icons-iconfont
 
   - name: sway-config-overwrite
     type: shell
