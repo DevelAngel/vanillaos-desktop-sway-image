@@ -22,7 +22,7 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
  * app launcher: [Fuzzel](https://codeberg.org/dnkl/fuzzel)
  * bar: [Waybar](https://github.com/Alexays/Waybar)
  * logout menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
- * notification daemon: [mako](https://github.com/emersion/mako)
+ * notifications: [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
  * brightness control with XF86MonBrightnessUp/Down keys: [blight](https://github.com/voltaireNoir/blight) 0.7.1
  * based on Vanilla OS Desktop image (Gnome3 desktop)
 
@@ -30,7 +30,7 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
 
  * sway's output handled by journald: `journalctl --user --identifier sway`
  * `waybar.service`
- * `mako.service`
+ * `swaync.service`
  * `sway-session.target`
  * `swayidle.service`
  * `swaylock.service`
