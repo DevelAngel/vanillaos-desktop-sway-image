@@ -42,11 +42,10 @@ stages:
       - pulseaudio-utils # pactl
       - wlogout
       - waybar # installs and enables waybar.service
-      - mako-notifier # installs and enables mako.service
+      - sway-notification-center # installs and enables swaync.service
       - fontconfig
 
   # NOTE: Waybar default config needs Font Awesome and Meslo LG.
-  #       Mako supports emojis.
   - name: nerd-fonts
     type: shell
     commands:
