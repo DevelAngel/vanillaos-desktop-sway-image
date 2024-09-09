@@ -51,6 +51,7 @@ stages:
     commands:
       - mkdir -p /usr/share/fonts
       - wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
+      - wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Noto.tar.xz | tar xvJ -C /usr/share/fonts
       - fc-cache -fv
 
   - name: more-fonts
