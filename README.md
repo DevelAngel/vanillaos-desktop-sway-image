@@ -24,6 +24,11 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
  * logout menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
  * notifications: [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
  * [XDG Desktop Portal](https://github.com/flatpak/xdg-desktop-portal) backend: [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr)
+   - [grim](https://sr.ht/~emersion/grim/) to take the screenshot
+   - [slurp](https://github.com/emersion/slurp) to select an area on the screen
+   - [swappy](https://github.com/jtheoof/swappy) to edit the captured screenshot
+   - [wl-clipboard](https://github.com/bugaevc/wl-clipboard) to copy the screenshot to the clipboard
+   - [wf-recorder](https://github.com/ammen99/wf-recorder) to capture videos
  * brightness control with XF86MonBrightnessUp/Down keys: [blight](https://github.com/voltaireNoir/blight) 0.7.1
  * based on Vanilla OS Desktop image (Gnome3 desktop)
 
