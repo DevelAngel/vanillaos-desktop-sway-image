@@ -56,10 +56,10 @@ stages:
   - name: nerd-fonts
     type: shell
     commands:
-      - mkdir -p /usr/share/fonts
-      - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
-      - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Noto.tar.xz | tar xvJ -C /usr/share/fonts
-      - fc-cache -fv
+    - mkdir -p /usr/share/fonts
+    - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
+    - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Noto.tar.xz | tar xvJ -C /usr/share/fonts
+    - fc-cache -fv
 
   - name: more-fonts
     type: apt
