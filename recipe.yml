@@ -45,6 +45,11 @@ stages:
       - waybar # installs and enables waybar.service
       - sway-notification-center # installs and enables swaync.service
       - xdg-desktop-portal-wlr
+      - grim
+      - slurp
+      - swappy
+      - wl-clipboard
+      - wf-recorder
       - fontconfig
 
   # NOTE: Waybar default config needs Font Awesome and Meslo LG.
