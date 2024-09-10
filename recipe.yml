@@ -56,6 +56,7 @@ stages:
   - name: nerd-fonts
     type: shell
     commands:
+    - set -ux
     - mkdir -p /usr/share/fonts
     - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
     - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Noto.tar.xz | tar xvJ -C /usr/share/fonts
@@ -72,6 +73,7 @@ stages:
   - name: sway-config-overwrite
     type: shell
     commands:
+    - set -ux
     - cp -av /etc/sway/config /etc/sway/config.orig
     - cp -av /etc/sway/config.vanillaos /etc/sway/config
     - echo Sway configuration updated for Vanilla-OS
@@ -79,6 +81,7 @@ stages:
   - name: sway-session-overwrite
     type: shell
     commands:
+    - set -ux
     - cp -av /wayland-sessions/sway.desktop /usr/share/wayland-sessions/sway.desktop
     - rm -rv /wayland-sessions
     - echo Sway session updated for Vanilla-OS
@@ -91,6 +94,7 @@ stages:
   - name: swaylock-fix
     type: shell
     commands:
+    - set -ux
     - ls -l /sbin/unix_chkpwd /etc/shadow
     # ```console
     # -rwxr-sr-x 1 root shadow /sbin/unix_chkpwd
@@ -106,6 +110,7 @@ stages:
   - name: blight-setup
     type: shell
     commands:
+    - set -ux
     - /usr/bin/blight setup
     - ls -l /usr/bin/blight
     - chgrp --changes video /usr/bin/blight
