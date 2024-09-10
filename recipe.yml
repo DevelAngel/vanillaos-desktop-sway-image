@@ -57,8 +57,8 @@ stages:
     type: shell
     commands:
       - mkdir -p /usr/share/fonts
-      - wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
-      - wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Noto.tar.xz | tar xvJ -C /usr/share/fonts
+      - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz | tar xvJ -C /usr/share/fonts
+      - wget --quiet --output-document=- https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Noto.tar.xz | tar xvJ -C /usr/share/fonts
       - fc-cache -fv
 
   - name: more-fonts
@@ -111,6 +111,20 @@ stages:
     - chgrp --changes video /usr/bin/blight
     - chmod --changes g+s /usr/bin/blight
     - ls -l /usr/bin/blight
+
+  - name: sway-interactive-screenshot
+    type: shell
+    commands:
+    - set -ux
+    - 'VERSION=$(curl -s https://api.github.com/repos/moverest/sway-interactive-screenshot/releases/latest | grep "tag_name" | cut -d : -f 2,3 | tr -d \ \",)'
+    - mkdir -p /tmp/sway-interactive-screenshot
+    - wget --quiet --output-document=- https://github.com/moverest/sway-interactive-screenshot/archive/refs/tags/${VERSION}.tar.gz | tar xvz --strip-components=1 -C /tmp/sway-interactive-screenshot
+    - cp -av /tmp/sway-interactive-screenshot/sway-interactive-screenshot /usr/bin
+    - chmod 0755 /usr/bin/sway-interactive-screenshot
+    - mkdir -p /usr/share/doc/sway-interactive-screenshot-${VERSION}
+    - cp -av -t /usr/share/doc/sway-interactive-screenshot-${VERSION} /tmp/sway-interactive-screenshot/README.md
+    - cp -av -t /usr/share/doc/sway-interactive-screenshot-${VERSION} /tmp/sway-interactive-screenshot/LICENSE
+    - rm -r /tmp/sway-interactive-screenshot
 
   # Put your custom actions before this comment
 
