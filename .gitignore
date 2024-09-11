@@ -3,3 +3,5 @@ Containerfile
 downloads/
 plugins/
 sources/
+# log files
+*.log
