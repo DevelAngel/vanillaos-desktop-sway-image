@@ -50,6 +50,7 @@ stages:
       - swappy
       - wl-clipboard
       - wf-recorder
+      - xdg-utils
       - fontconfig
 
   # NOTE: Waybar default config needs Font Awesome and Meslo LG.
