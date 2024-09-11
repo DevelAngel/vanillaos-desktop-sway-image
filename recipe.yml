@@ -132,6 +132,24 @@ stages:
     - cp -av -t /usr/share/doc/sway-interactive-screenshot-${VERSION} /tmp/sway-interactive-screenshot/LICENSE
     - rm -r /tmp/sway-interactive-screenshot
 
+  - name: dragon-drop-compile
+    type: shell
+    commands:
+    - set -ux
+    - apt-get install -y --mark-auto make gcc libgtk-3-dev # will be removed in cleanup
+    - gcc --version
+    - 'VERSION=$(curl -s https://api.github.com/repos/mwh/dragon/releases/latest | grep "tag_name" | cut -d : -f 2,3 | tr -d \ \",v)'
+    - mkdir -p /tmp/dragon-drop
+    - cd /tmp/dragon-drop
+    - wget --quiet --output-document=- https://github.com/mwh/dragon/archive/refs/tags/v${VERSION}.tar.gz | tar xvz --strip-components=1
+    - make all
+    - make PREFIX=/usr NAME=dragon-drop install
+    - ln -s dragon-drop /usr/bin/dragon
+    - mkdir -p /usr/share/doc/dragon-drop-${VERSION}
+    - cp -av -t /usr/share/doc/dragon-drop-${VERSION} README
+    - cp -av -t /usr/share/doc/dragon-drop-${VERSION} LICENCE
+    - cd && rm -r /tmp/dragon-drop
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot
