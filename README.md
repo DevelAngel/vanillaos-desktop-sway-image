@@ -28,6 +28,7 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
    - [slurp](https://github.com/emersion/slurp) to select an area on the screen
    - [swappy](https://github.com/jtheoof/swappy) to edit the captured screenshot
    - [xdg-utils](https://www.freedesktop.org/wiki/Software/xdg-utils/) to open the captured screenshot with the default image viewer
+   - [dragon-drop](https://github.com/mwh/dragon) to drag and drop the captured screenshot
    - [wl-clipboard](https://github.com/bugaevc/wl-clipboard) to copy the screenshot to the clipboard
    - [wf-recorder](https://github.com/ammen99/wf-recorder) to capture videos
  * screenshot/video capture with Print key: [sway-interactive-screenshot](https://github.com/moverest/sway-interactive-screenshot)
