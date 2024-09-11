@@ -23,7 +23,8 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
  * bar: [Waybar](https://github.com/Alexays/Waybar)
  * logout menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
  * notifications: [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
- * [XDG Desktop Portal](https://github.com/flatpak/xdg-desktop-portal) backend: [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr)
+ * print screen / video capture with Print key: [sway-interactive-screenshot](https://github.com/moverest/sway-interactive-screenshot)
+   - [XDG Desktop Portal](https://github.com/flatpak/xdg-desktop-portal) backend: [xdg-desktop-portal-wlr](https://github.com/emersion/xdg-desktop-portal-wlr)
    - [grim](https://sr.ht/~emersion/grim/) to take the screenshot
    - [slurp](https://github.com/emersion/slurp) to select an area on the screen
    - [swappy](https://github.com/jtheoof/swappy) to edit the captured screenshot
@@ -31,7 +32,6 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
    - [dragon-drop](https://github.com/mwh/dragon) to drag and drop the captured screenshot
    - [wl-clipboard](https://github.com/bugaevc/wl-clipboard) to copy the screenshot to the clipboard
    - [wf-recorder](https://github.com/ammen99/wf-recorder) to capture videos
- * screenshot/video capture with Print key: [sway-interactive-screenshot](https://github.com/moverest/sway-interactive-screenshot)
  * brightness control with XF86MonBrightnessUp/Down keys: [blight](https://github.com/voltaireNoir/blight) 0.7.1
  * based on Vanilla OS Desktop image (Gnome3 desktop)
 
