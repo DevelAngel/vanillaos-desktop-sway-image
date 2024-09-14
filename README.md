@@ -4,6 +4,8 @@ Containerfile for building a Vanilla OS Desktop image with Gnome and Sway-WM.
 
 This image is based on top of vanillaos/desktop and extends the default Vanilla OS Gnome Desktop experience with Sway.
 
+![The Vanilla OS bootscreen is shown with the Sway logo put inside it.](./docs/images/vanillaos-sway.png)
+
 ## Sway
 
 [Sway](https://swaywm.org/) is a tiling Wayland compositor and a drop-in replacement for the i3 window manager for X11.
