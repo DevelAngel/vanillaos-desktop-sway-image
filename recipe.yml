@@ -150,6 +150,20 @@ stages:
     - cp -av -t /usr/share/doc/dragon-drop-${VERSION} LICENCE
     - cd && rm -r /tmp/dragon-drop
 
+  - name: android-support
+    type: apt
+    source:
+      packages:
+      - android-sdk-platform-tools-common
+      - mtp-tools
+
+  - name: group-fixes
+    type: shell
+    commands:
+    - set -ux
+    - chown root:root /usr/sbin/adduser2group
+    - chmod u+s /usr/sbin/adduser2group
+
   # Put your custom actions before this comment
 
   - name: set-image-name-abroot

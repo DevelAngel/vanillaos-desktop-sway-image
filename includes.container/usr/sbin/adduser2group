@@ -1,0 +1,5 @@
+#!/bin/sh
+user=${1:?missing user argument}
+group=${2:?missing group argument}
+set -ue
+adduser "$user" "$group"
