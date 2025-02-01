@@ -23,12 +23,20 @@ stages:
 
   # Put your custom actions behind this comment
 
+  - name: wezterm
+    type: shell
+    commands:
+    - curl -fsSL https://apt.fury.io/wez/gpg.key | gpg --yes --dearmor -o /etc/apt/keyrings/wezterm-fury.gpg
+    - echo 'deb [signed-by=/etc/apt/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | tee /etc/apt/sources.list.d/wezterm.list
+    - apt-get update
+
   - name: common-packages
     type: apt
     source:
       packages:
       - tree
       - vim
+      - wezterm
 
   - name: sway-packages
     type: apt
@@ -162,6 +170,7 @@ stages:
     commands:
     - set -ux
     - chown root:root /usr/sbin/adduser2group
+
 
   # Put your custom actions before this comment
 
