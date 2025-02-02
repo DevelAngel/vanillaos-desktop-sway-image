@@ -21,6 +21,7 @@ We want to provide a similar experiance as the [Manjaro Sway Edition](https://gi
 
 - Vanilla OS background image
 - screen locking: [swaylock](https://github.com/swaywm/swaylock), triggered by [swayidle](https://github.com/swaywm/swayidle)
+- terminal: [WezTerm](https://wezfurlong.org/wezterm/), supports programming ligatures
 - app launcher: [Fuzzel](https://codeberg.org/dnkl/fuzzel)
 - bar: [Waybar](https://github.com/Alexays/Waybar)
 - logout menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
