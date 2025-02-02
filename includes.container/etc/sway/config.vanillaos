@@ -15,8 +15,10 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # - foot is the default for sway
-# - blackbox-terminal is the default in Vanilla-OS 
-set $term blackbox-terminal
+# - blackbox-terminal is the default in Vanilla-OS
+# - vso-os-shell is the default shell in Vanilla-OS, implicitly used by blackbox-terminal
+set $term wezterm start vso-os-shell
+set $termalt wezterm
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -55,6 +57,7 @@ output * bg /usr/share/backgrounds/vanilla/petals_light.webp stretch
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod+Shift+Return exec $termalt
 
     # Kill focused window
     bindsym $mod+Shift+q kill
